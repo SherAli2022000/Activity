@@ -6,7 +6,7 @@ on:
     branches: [ branch1,branch2,main]
   pull_request:
     branches: [ branch1,branch2,main]
-    types: [ opened, synchronize ]
+    types: [ opened, synchronize,closed ]
 
 jobs:
   build:
