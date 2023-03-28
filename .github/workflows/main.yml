@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    if: (github.event_name == 'pull_request' && github.base_ref == 'main' && github.event.pull_request.merged) || (github.event_name == 'push' && github.ref == 'refs/heads/branch1' || github.ref == 'refs/heads/branch2' )
+    if: (github.event_name == 'pull_request' && github.base_ref == 'main' && github.event.pull_request.merged) || (github.event_name == 'push' && github.ref == 'refs/heads/branch1' || github.ref == 'refs/heads/branch2' || github.base_ref == 'main' )
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -31,4 +31,3 @@ jobs:
 
         
         
-
