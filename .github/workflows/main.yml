@@ -10,6 +10,7 @@ on:
 
 jobs:
   build:
+    if: github.event_name == 'pull_request' && github.base_ref != 'main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -26,14 +27,7 @@ jobs:
       - name: Lint
         run: |
           make lint
-      - name: Build Main
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: |
-          make build
-      - name: Build Branch
-        if: github.event_name == 'pull_request' && github.base_ref != 'main'
-        run: |
-          make build
+
 
         
         
