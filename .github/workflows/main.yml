@@ -2,12 +2,12 @@
 name: Python application test with Github Actions
 on: 
   push:
-    branches: [ i192007_SherAli,i190560_hassansaif,main]
+    branches: [ branch1,branch2,main]
   pull_request:
-    branches: [ i192007_SherAli,i190560_hassansaif,main ]
+    branches: [ branch1,branch2,main ]
     types: [ opened, synchronize ]
   fork:
-    branches: [ i192007_SherAli,i190560_hassansaif,main ]
+    branches: [ branch1,branch2,main ]
 jobs:
   build:
     runs-on: ubuntu-latest
