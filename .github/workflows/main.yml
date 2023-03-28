@@ -42,4 +42,4 @@ jobs:
           git config --global user.name "Github Actions"
           git checkout main
           git merge --no-ff ${{ github.head_ref }} -m "Automated merge of ${{ github.head_ref }} into main"
-          git push https://$GITHUB_ACTOR:${{ secrets.pat }}@github.com/${{ github.repository }} HEAD:refs/heads/main
+          git push https://$GITHUB_ACTOR:${{ secrets.PAT }}@github.com/${{ github.repository }} HEAD:refs/heads/main
